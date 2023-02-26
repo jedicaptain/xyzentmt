@@ -1,79 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>xyzentmts</title>
+    <title>Xyzentmts</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <style>
-      #banner {
+      #banner{
+        height: 360xp;
         width: 100%;
-        height: 160px;
-        object-fit: cover
-      }
-      
-      h1 {
-        font-size: 40px;
-        font-family: Roboto;
-        font-weight: bold;
-        color: rgb(0, 0, 255);
-        text-align: center;
-      }
-
-      h2 {
-        font-size: 22px;
-        font-family: Roboto;
-        font-weight: bold;
-        color: rgb(0, 0, 255);
-        text-align: center;
-      }
-
-      .bodytext {
-        font-size: 12px;
-        font-family: Roboto;
-        font-weight: bold;
-        color: rgb(80,80,80);
-        text-align: center;
-      }
-
-      p {
-        font-size: 12px;
-        font-family: Roboto;
-        font-weight: bold;
-        color: rgb(80,80,80);
-        text-align: left;
-      }
-
-      .copyright {
-        font-size: 10px;
-        font-family: Roboto;
-        text-align: center;
-      }
-
-      #container {
-        max-width: auto;
-        margin: 20xp;
+        object-fit: cover;
       }
       
     </style>
   </head>
   <body>
-    <div id="container">
-      <h1>Frequancy</h1>
-    
-      <img id="banner" src = "https://xyzentmts.jedicaptain.repl.co/static/xyzentmts.jpg" 
-      height="500">
-      <h2>About The Net</h2>
-      <p class="bodytext">
-      So this text can chnage at any time but i did want you to see that this is a functioning web sit. now i just need to figure out what to do with it.
+    <div class="container">
+      <h1 class="text-center mt-4 mb-4">
+        {{company_name}} Frequancy
+      </h1>
+      <img class="img-fluid" id="banner" src="https://xyzentmts.jedicaptain.repl.co/static/xyzentmts.jpg"
+        <h2 class="Text-center mt-2 mb-4">
+      About the Net
+    </h2>
+      <p class="lead">
+      So this text can chnage at any time but i did want you to see that this is a functioning web sit. now i just need to figure out what to do with it. So this text can chnage at any time but i did want you to see that this is a functioning web sit. now i just need to figure out what to do with it.So this text can chnage at any time but i did want you to see that this is a functioning web sit. now i just need to figure out what to do with it.
       </p>
-      <h2>open information</h2>
-      <p class="bodytext">
-      Dean D'shamman, what shall it be? what should we put on this websit? Somthing that will make us money.
-      </p>
-      <div class="copyright">
-        <button>Click Me... Do It!</button>
-        <p class="copyright">
-           Copyright 2023
-        </p>
+      <h2 class="text-center mt-4 mb-4">
+        Open Job Information
+      </h2>
       <div>
+        {% for job in jobs %}
+          {% include 'jobitem.html' %}
+        {% endfor %}
+      </p>
+      <div class="text center">
+      <button class="btn btn-primary">Don't Touch Me!</button>
+        Click it... Do It!</button>
+      <p class="text center mt-0">
+        Copyright@2023
+      </p>
+      </div>
     </div>
   </body>
 </html>
